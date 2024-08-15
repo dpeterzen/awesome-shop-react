@@ -1,33 +1,32 @@
 import { Link } from "react-router-dom";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import ShopContext from "../context/ShopContext";
 
 
-function Links() {
+function Links({ openCart, handleOpenCart }) {
   const { cartItems } = useContext(ShopContext); // We must pass the ShopContext object itself as an argument
-  console.log('cart items--------> ', cartItems);
+
+
   return (
     <ul>
       {/* Other links */}
       <li>
-        <Link to="Link to the cart">
+        <Link to="#" onClick={handleOpenCart}>
           <span>Cart</span>
-          <div className="cart-icon">{2}</div>
+          <div className="cart-icon">🛒{cartItems.length}</div>
         </Link>
       </li>
     </ul>
   );
 }
 
-function Header() {
+export default function Header({ openCart, handleOpenCart }) {
   return (
     <header>
       {/* Other header elements */}
       <nav>
-        <Links />
+        <Links openCart={openCart} handleOpenCart={handleOpenCart} />
       </nav>
     </header>
   );
 }
-
-export default Header;
