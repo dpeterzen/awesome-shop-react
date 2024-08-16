@@ -1,0 +1,24 @@
+header {
+    display: flex;
+    justify-content: center; /* Adjust this if you want different alignment */
+    align-items: center; /* Center vertically */
+    padding: 10px;
+    width: 100%; /* Make the header span the full width */
+    box-sizing: border-box; /* Include padding in the width */
+  }
+  
+  
+  nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav ul li {
+    margin-left: 20px;
+  }
+  
+  .cart-icon {
+    margin-left: 5px;
+  }

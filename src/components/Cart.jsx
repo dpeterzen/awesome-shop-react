@@ -1,15 +1,18 @@
 import { useMemo } from "react";
+import PropTypes from "prop-types";
+import "../styles/cart.css"; 
 
-export default function Cart({ products }) {
+
+export default function Cart({ cartItems }) {
   const totalPrice = useMemo(() => {
-    return products.reduce(
-      (total, product) => total + product.price * product.quantity,
+    return cartItems.reduce(
+      (total, item) => total + item.price * item.quantity,
       0
     );
-  }, [products]);
+  }, [cartItems]);
 
   return (
-    <div>
+    <div className="cart-container">
       {/* Some other content in the cart */}
       {/* Products to display */}
       <p>
@@ -19,3 +22,7 @@ export default function Cart({ products }) {
     </div>
   );
 }
+
+Cart.propTypes = {
+  cartItems: PropTypes.array.isRequired,
+};

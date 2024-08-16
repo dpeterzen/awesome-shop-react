@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { useContext, useState } from "react";
 import ShopContext from "../context/ShopContext";
-
+import "../styles/header.css"; 
 
 function Links({ openCart, handleOpenCart }) {
   const { cartItems } = useContext(ShopContext); // We must pass the ShopContext object itself as an argument

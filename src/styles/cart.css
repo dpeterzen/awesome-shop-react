@@ -1,0 +1,10 @@
+.cart-container {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .cart-container p {
+    font-size: 18px;
+  }
+  
