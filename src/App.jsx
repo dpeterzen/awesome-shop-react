@@ -46,7 +46,7 @@ function App() {
           ))}
         </div>
       </ShopContext.Provider>
-      {openCart && <Cart cartItems={cartItems} />}
+      <Cart openCart={openCart} cartItems={cartItems} />
     </>
 
   );
