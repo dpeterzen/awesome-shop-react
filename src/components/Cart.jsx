@@ -12,13 +12,15 @@ export default function Cart({ cartItems }) {
   }, [cartItems]);
 
   return (
-    <div className="cart-container">
-      {cartItems.map((item, index) => (
-        <div key={index}>
-          <p>Name: {item.name}</p>
-          <p>Price: ${item.price}</p>
-        </div>
-      ))}
+    <div className="cart">
+      <h2>Shopping Cart</h2>
+      <ul>
+        {cartItems.map((item, index) => (
+          <li key={index}>
+            {item.name} - ${item.price} x {item.quantity}
+          </li>
+        ))}
+      </ul>
       <p>
         Total Price: <strong>${totalPrice}</strong>
       </p>

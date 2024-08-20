@@ -4,7 +4,8 @@ import Header from './components/Header';
 import Cart from "./components/Cart";
 import Product from './components/Product';
 import ProductDetail from './components/ProductDetail';
-import './App.css'
+import './App.css';
+import './styles/product.css';
 
 
 function App() {

@@ -3,18 +3,37 @@
   margin: 0 auto;
   width: 100%;
   padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-/* src/App.css */
+
+
+/* Product grid styling */
 .product-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 16px;
   padding: 16px;
+  width: 100%;
 }
 
-.product {
-  border: 1px solid #ccc;
-  padding: 16px;
-  text-align: center;
+
+
+
+/* Responsive design */
+@media (max-width: 768px) {
+  #root {
+    padding: 0;
+  }
+  .product-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
 }

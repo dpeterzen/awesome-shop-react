@@ -1,10 +1,35 @@
-.cart-container {
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+/* src/styles/cart.css */
+
+.cart {
+  padding: 2rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000; /* Ensure it overlays other content */
+  position: fixed;
+  right: 0;
+  top: 50px;
+  width: 100%; /* Default to full width */
+  max-width: 333px; /* Optional: limit the max width */
+  margin: 2rem;
+  background-color: #242424;
+}
+
+.cart p {
+  font-size: 18px;
+}
+
+@media (max-width: 768px) {
+  .cart {
+    width: 100%; /* Full width on narrow screens */
+    margin: 0; /* Remove margin */
   }
-  
-  .cart-container p {
-    font-size: 18px;
+}
+
+@media (prefers-color-scheme: light) {
+  .cart {
+
+    background-color: #ffffff;
   }
-  
+}
+
