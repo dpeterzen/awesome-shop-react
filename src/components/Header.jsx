@@ -13,7 +13,7 @@ function Links({ openCart, handleOpenCart }) {
       <li>
         <Link to="#" onClick={handleOpenCart}>
           <span>Cart</span>
-          <div className="cart-icon">🛒{cartItems.length}</div>
+          <span className="cart-icon">🛒{cartItems.length}</span>
         </Link>
       </li>
     </ul>

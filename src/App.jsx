@@ -1,9 +1,10 @@
 import { useState } from 'react'
+import ShopContext from './context/ShopContext';
 import Header from './components/Header';
+import Cart from "./components/Cart";
+import Product from './components/Product';
 import ProductDetail from './components/ProductDetail';
 import './App.css'
-import ShopContext from './context/ShopContext';
-import Cart from "./components/Cart";
 
 
 function App() {
@@ -38,6 +39,11 @@ function App() {
     <>
       <ShopContext.Provider value={{ cartItems, products, addToCart }}>
         <Header openCart={openCart} handleOpenCart={handleOpenCart} />
+        <div className="product-grid">
+          {products.map((product, index) => (
+            <Product key={index} {...product} />
+          ))}
+        </div>
       </ShopContext.Provider>
       {openCart && <Cart cartItems={cartItems} />}
     </>
