@@ -6,13 +6,14 @@
   border-radius: 5px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   z-index: 1000; /* Ensure it overlays other content */
-  position: fixed;
-  right: 0;
-  top: 50px;
-  width: 100%; /* Default to full width */
-  max-width: 333px; /* Optional: limit the max width */
-  margin: 2rem;
-  background-color: #242424;
+  position: absolute; /* Position relative to the #root element */
+  top: 85px; /* Adjust this value based on the height of your header */
+  right: 31px;
+  width: 100%;
+  max-width: 400px; /* Optional: limit the max width */
+  background-color: #111827;
+  overflow-y: auto; /* Add vertical scroll if content overflows */
+  max-height: calc(100vh - 60px - 4rem); /* Ensure it fits within the viewport */
 }
 
 .cart p {
@@ -21,15 +22,17 @@
 
 @media (max-width: 768px) {
   .cart {
-    width: 100%; /* Full width on narrow screens */
+    width: 50%; /* Full width on narrow screens */
     margin: 0; /* Remove margin */
+    top: 56px;
+    right: 0;
   }
 }
 
 @media (prefers-color-scheme: light) {
   .cart {
 
-    background-color: #ffffff;
+    background-color: #fff;
   }
 }
 

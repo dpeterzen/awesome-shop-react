@@ -4,10 +4,10 @@
 header {
   width: 100%;
   padding: 1rem 0;
-  background-color: #343a40; /* Dark background for header */
   display: flex;
   justify-content: space-between; /* Space between elements */
   align-items: center; /* Center items vertically */
+  border: 1px solid #ccc;
 }
 
 /* Styling for the navigation */
