@@ -4,7 +4,7 @@ import ShopContext from "../context/ShopContext";
 import "../styles/header.css"; 
 
 /* eslint-disable react/prop-types */
-function Links({ handleOpenCart, handleMouseEnter, handleMouseLeave }) {
+function Links({ handleOpenCart, handleMouseEnterCart, handleMouseLeaveCart }) {
   const { cartItems } = useContext(ShopContext); // We must pass the ShopContext object itself as an argument
 
   return (
@@ -19,13 +19,14 @@ function Links({ handleOpenCart, handleMouseEnter, handleMouseLeave }) {
           <span>Products</span>
         </Link>
       </li>
+
+      {/* hoverable cart link here */}
       <li
-        onMouseEnter={handleMouseEnter}
-        onMouseLeave={handleMouseLeave}
+        className="cart-toggler"
+        onMouseEnter={handleMouseEnterCart}
+        onMouseLeave={handleMouseLeaveCart}
       >
-        <Link to="#"
-          onClick={handleOpenCart}
-        >
+        <Link to="#" onClick={handleOpenCart}>
           <span>Cart</span>
           <span className="cart-icon">{cartItems.length}</span>
         </Link>
@@ -34,15 +35,15 @@ function Links({ handleOpenCart, handleMouseEnter, handleMouseLeave }) {
   );
 }
 
-export default function Header({ handleOpenCart, handleMouseEnter, handleMouseLeave }) {
+export default function Header({ handleOpenCart, handleMouseEnterCart, handleMouseLeaveCart }) {
   return (
     <header>
       <div className="logo">Very Awesome Shop</div>
       <nav>
         <Links
           handleOpenCart={handleOpenCart}
-          handleMouseEnter={handleMouseEnter}
-          handleMouseLeave={handleMouseLeave}
+          handleMouseEnterCart={handleMouseEnterCart}
+          handleMouseLeaveCart={handleMouseLeaveCart}
         />
       </nav>
     </header>

@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import ShopContext from './context/ShopContext';
 import Header from './components/Header';
 import Cart from "./components/Cart";
@@ -28,15 +28,36 @@ function App() {
 
   const handleOpenCart = () => {
     setOpenCart(!openCart);
+    setHoverCart(false);
   };
 
-  const handleMouseEnter = () => {
+  const handleMouseEnterCart = () => {
     setHoverCart(true);
   };
 
-  const handleMouseLeave = () => {
+  const handleMouseLeaveCart = () => {
     setHoverCart(false);
   };
+
+  const handleCloseCart = () => {
+    setOpenCart(false);
+    setHoverCart(false);
+  };
+
+  // Added handleClickOutside to close the cart when clicking outside of it
+  const handleClickOutside = (event) => {
+    if (!event.target.closest('.cart') && !event.target.closest('.cart-toggler')) {
+      setOpenCart(false);
+    }
+  };
+
+  // Used useEffect to add and remove the event listener for clicks outside the cart
+  useEffect(() => {
+    document.addEventListener('click', handleClickOutside);
+    return () => {
+      document.removeEventListener('click', handleClickOutside);
+    };
+  }, []);
 
   return (
     /* We are going to pass the things that we want to inject to these components using the value prop */
@@ -45,8 +66,8 @@ function App() {
       <ShopContext.Provider value={{ cartItems, products, addToCart }}>
         <Header
           handleOpenCart={handleOpenCart}
-          handleMouseEnter={handleMouseEnter}
-          handleMouseLeave={handleMouseLeave}
+          handleMouseEnterCart={handleMouseEnterCart}
+          handleMouseLeaveCart={handleMouseLeaveCart}
         />
         <div className="product-grid">
           {products.map((product, index) => (
@@ -57,8 +78,9 @@ function App() {
       <Cart
         openCart={openCart || hoverCart}
         cartItems={cartItems}
-        handleMouseEnter={handleMouseEnter}
-        handleMouseLeave={handleMouseLeave}
+        handleMouseEnterCart={handleMouseEnterCart}
+        handleMouseLeaveCart={handleMouseLeaveCart}
+        handleCloseCart={handleCloseCart}
       />
     </>
 

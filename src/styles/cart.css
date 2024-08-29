@@ -24,6 +24,15 @@
 .cart.open {
   display: block;
 }
+.close-cart {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 13px;
+  cursor: pointer;
+}
 
 @media (max-width: 768px) {
   .cart {
