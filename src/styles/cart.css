@@ -21,7 +21,7 @@
   font-size: 18px;
 }
 
-.cart.open {
+.cart.hover {
   display: block;
 }
 .close-cart {

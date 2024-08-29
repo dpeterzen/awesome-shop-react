@@ -4,11 +4,10 @@ import "../styles/cart.css";
 
 /* eslint-disable react/prop-types */
 export default function Cart({
-  openCart,
+  hoverCart,
   cartItems,
   handleMouseEnterCart,
   handleMouseLeaveCart,
-  handleCloseCart,
 }) {
   const totalPrice = useMemo(() => {
     console.log('got here');
@@ -39,11 +38,10 @@ export default function Cart({
 
   return (
     <div
-      className={`cart ${openCart ? 'open' : ''}`}
+      className={`cart ${hoverCart ? 'hover' : ''}`}
       onMouseEnter={handleMouseEnterCart}
       onMouseLeave={handleMouseLeaveCart}
     >
-      <button className="close-cart" onClick={handleCloseCart}>&#10005;</button>
       <h2>Shopping Cart</h2>
       <ul>
         {cartItems.map((item, index) => (
