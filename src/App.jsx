@@ -7,7 +7,7 @@ import ProductDetail from './components/ProductDetail';
 import './App.css';
 import './styles/product.css';
 
-
+/* eslint-disable react/prop-types */
 function App() {
   const [cartItems, setCartItems] = useState([
     {name: 'sunglasses', price: 3.5, quantity: 11000},
@@ -24,14 +24,18 @@ function App() {
   }; 
 
   const [openCart, setOpenCart] = useState(false);
+  const [hoverCart, setHoverCart] = useState(false);
 
   const handleOpenCart = () => {
-    // if (!openCart) {
-    //   setOpenCart(true);
-    // } else {
-    //   setOpenCart(false);
-    // }
     setOpenCart(!openCart);
+  };
+
+  const handleMouseEnter = () => {
+    setHoverCart(true);
+  };
+
+  const handleMouseLeave = () => {
+    setHoverCart(false);
   };
 
   return (
@@ -39,14 +43,23 @@ function App() {
     /* This value prop will overwrite the default value */
     <>
       <ShopContext.Provider value={{ cartItems, products, addToCart }}>
-        <Header openCart={openCart} handleOpenCart={handleOpenCart} />
+        <Header
+          handleOpenCart={handleOpenCart}
+          handleMouseEnter={handleMouseEnter}
+          handleMouseLeave={handleMouseLeave}
+        />
         <div className="product-grid">
           {products.map((product, index) => (
             <Product key={index} {...product} />
           ))}
         </div>
       </ShopContext.Provider>
-      <Cart openCart={openCart} cartItems={cartItems} />
+      <Cart
+        openCart={openCart || hoverCart}
+        cartItems={cartItems}
+        handleMouseEnter={handleMouseEnter}
+        handleMouseLeave={handleMouseLeave}
+      />
     </>
 
   );

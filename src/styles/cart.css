@@ -1,14 +1,15 @@
 /* src/styles/cart.css */
 
 .cart {
+  display: none;
   padding: 2rem;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 3px solid;
+  border-width: 3px 0px 3px 3px;
+  border-radius: 0px 0px 0px 7px;
   z-index: 1000; /* Ensure it overlays other content */
   position: absolute; /* Position relative to the #root element */
-  top: 85px; /* Adjust this value based on the height of your header */
-  right: 31px;
+  top: 93px; /* Adjust this value based on the height of your header */
+  right: 32px;
   width: 100%;
   max-width: 400px; /* Optional: limit the max width */
   background-color: #111827;
@@ -20,19 +21,22 @@
   font-size: 18px;
 }
 
+.cart.open {
+  display: block;
+}
+
 @media (max-width: 768px) {
   .cart {
     width: 50%; /* Full width on narrow screens */
     margin: 0; /* Remove margin */
-    top: 56px;
-    right: 0;
+    top: 100px;
+    right: 0px;
   }
 }
 
 @media (prefers-color-scheme: light) {
   .cart {
-
-    background-color: #fff;
+    background-color: rgb(249 250 251);
   }
 }
 

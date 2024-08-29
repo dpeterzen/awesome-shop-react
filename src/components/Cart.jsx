@@ -2,8 +2,8 @@ import { useMemo } from "react";
 import PropTypes from "prop-types";
 import "../styles/cart.css"; 
 
-
-export default function Cart({ openCart, cartItems }) {
+/* eslint-disable react/prop-types */
+export default function Cart({ openCart, cartItems, handleMouseEnter, handleMouseLeave }) {
   const totalPrice = useMemo(() => {
     console.log('got here');
     return cartItems.reduce(
@@ -12,11 +12,31 @@ export default function Cart({ openCart, cartItems }) {
     );
   }, [cartItems]);
 
-
+  // return (
+  //   openCart && (<>
+  //     <div className="cart">
+  //       <h2>Shopping Cart</h2>
+  //       <ul>
+  //         {cartItems.map((item, index) => (
+  //           <li key={index}>
+  //             {item.name} - ${item.price} x {item.quantity}
+  //           </li>
+  //         ))}
+  //       </ul>
+  //       <p>
+  //         Total Price: <strong>${totalPrice}</strong>
+  //       </p>
+  //       {/* Some button to checkout */}
+  //     </div>
+  //   </>)
+  // );
 
   return (
-    openCart && (<>
-      <div className="cart">
+    <div
+      className={`cart ${openCart ? 'open' : ''}`}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+    >
         <h2>Shopping Cart</h2>
         <ul>
           {cartItems.map((item, index) => (
@@ -29,9 +49,7 @@ export default function Cart({ openCart, cartItems }) {
           Total Price: <strong>${totalPrice}</strong>
         </p>
         {/* Some button to checkout */}
-      </div>
-    </>)
-
+    </div>
   );
 }
 
