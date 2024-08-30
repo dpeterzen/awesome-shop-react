@@ -1,6 +1,6 @@
 
-  /* Individual product styling */
-  .product {
+/* Individual product styling */
+  .product-item {
     border: 3px solid;
     border-radius: 1px;
     padding: 16px;
@@ -8,6 +8,6 @@
     transition: transform 0.2s; /* Smooth hover effect */
   }
   
-  .product:hover {
+  .product-item:hover {
     transform: translateY(-3px); /* Lift effect on hover */
   }

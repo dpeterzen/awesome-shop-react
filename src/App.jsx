@@ -1,11 +1,8 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import ShopContext from './context/ShopContext';
-import Header from './components/Header';
-import Cart from "./components/Cart";
-import Product from './components/Product';
-import ProductDetail from './components/ProductDetail';
+import { Outlet } from "react-router-dom";
+import Header from './components/Header/Header.jsx';
 import './App.css';
-import './styles/product.css';
 
 /* eslint-disable react/prop-types */
 function App() {
@@ -23,40 +20,15 @@ function App() {
     null;
   }; 
 
-  const [hoverCart, setHoverCart] = useState(false);
-
-  const handleMouseEnterCart = () => {
-    setHoverCart(true);
-  };
-
-  const handleMouseLeaveCart = () => {
-    setHoverCart(false);
-  };
-
-
   return (
     /* We are going to pass the things that we want to inject to these components using the value prop */
     /* This value prop will overwrite the default value */
     <>
       <ShopContext.Provider value={{ cartItems, products, addToCart }}>
-        <Header
-          handleMouseEnterCart={handleMouseEnterCart}
-          handleMouseLeaveCart={handleMouseLeaveCart}
-        />
-        <div className="product-grid">
-          {products.map((product, index) => (
-            <Product key={index} {...product} />
-          ))}
-        </div>
+        <Header />
+        <Outlet />
       </ShopContext.Provider>
-      <Cart
-        hoverCart={hoverCart}
-        cartItems={cartItems}
-        handleMouseEnterCart={handleMouseEnterCart}
-        handleMouseLeaveCart={handleMouseLeaveCart}
-      />
     </>
-
   );
 }
 

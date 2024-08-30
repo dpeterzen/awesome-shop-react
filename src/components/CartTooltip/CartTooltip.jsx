@@ -1,16 +1,16 @@
 import { useMemo } from "react";
 import PropTypes from "prop-types";
-import "../styles/cart.css"; 
+import "./CartTooltip.css"; 
 
 /* eslint-disable react/prop-types */
-export default function Cart({
-  hoverCart,
+export default function CartTooltip({
+  openCartTooltip,
   cartItems,
   handleMouseEnterCart,
   handleMouseLeaveCart,
 }) {
   const totalPrice = useMemo(() => {
-    console.log('got here');
+    // console.log('got here');
     return cartItems.reduce(
       (total, item) => total + item.price * item.quantity,
       0
@@ -38,7 +38,7 @@ export default function Cart({
 
   return (
     <div
-      className={`cart ${hoverCart ? 'hover' : ''}`}
+      className={`cart ${openCartTooltip ? 'open' : ''}`}
       onMouseEnter={handleMouseEnterCart}
       onMouseLeave={handleMouseLeaveCart}
     >
@@ -58,7 +58,7 @@ export default function Cart({
   );
 }
 
-Cart.propTypes = {
+CartTooltip.propTypes = {
   openCart: PropTypes.bool.isRequired,
   cartItems: PropTypes.array.isRequired,
 };

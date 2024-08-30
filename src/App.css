@@ -9,31 +9,3 @@
   position: relative;
   background-color: #111827; /* Ensure the cart is positioned relative to the root */
 }
-
-
-/* Product grid styling */
-.product-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 16px;
-  padding: 16px;
-  width: 100%;
-}
-
-
-/* Responsive design */
-@media (max-width: 768px) {
-  #root {
-    padding: 0;
-  }
-  .product-grid {
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    padding: 16px 0;
-  }
-}
-
-@media (max-width: 480px) {
-  .product-grid {
-    grid-template-columns: 1fr;
-  }
-}
