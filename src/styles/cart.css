@@ -35,23 +35,20 @@
 	border-right: 3px solid #b7bbc3;
 	border-top: 3px solid #b7bbc3;
 	transform: rotate(-45deg);
-	z-index: 998;
+	z-index: 1000;
 	background-color: #111827;
 }
 
 .cart::before {
 	content: '';
 	position: absolute;
-	top: -8px;
+	top: -19px;
 	right: 12px;
 	width: 85px;
-	height: 2px;
-	/* border-right: 3px solid #b7bbc3; */
-	border-top: 3px solid #b7bbc3;
-	/* transform: rotate(-45deg); */
-	z-index: 998;
+	height: 22px;
+	z-index: 1000;
 	background-color: #111827;
-	border-bottom: 3px solid #b7bbc3;
+	opacity: 0;
 }
 
 @media (max-width: 768px) {
