@@ -19,28 +19,30 @@ header {
 /* Styling for the navigation */
 header nav {
   display: flex;
+  justify-content: flex-end; /* Align items to the right */
+  align-items: center;
 }
 
 /* Styling for the list of links */
-nav ul {
+.nav-links {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end; /* Align items to the right */
   align-items: center;
-  list-style: none;
   padding: 0;
   margin: 0;
-  gap: 1rem;
 }
 
 /* Styling for individual list items */
-nav ul li {
+.left-links {
   box-sizing: border-box;
-  padding: 16px 0;
   display: flex;
   align-items: center;
-  margin-right: 1rem;
+  padding: 16px 0;
+  gap: 1rem;
 }
-
+.cart-link {
+  padding: 16px;
+}
 /* Styling for the links */
 nav a {
   text-decoration: none;
@@ -69,17 +71,23 @@ nav a {
     border-top: none;
   }
 
-  header nav {
+  .nav-links {
+    display: flex;
     justify-content: space-between;
+    align-items: center;
+    width: 100%;
   }
 
-  header nav ul {
+  .nav-links .left-links {
+    display: flex;
     justify-content: center;
+    flex: 1;
   }
 
-  header nav ul li {
-    margin-left: 0;
-    margin-top: 0.5rem;
+  .nav-links .right-link {
+    display: flex;
+    justify-content: flex-end;
+    flex: 1;
   }
   .logo {
 

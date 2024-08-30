@@ -43,8 +43,8 @@
 	content: '';
 	position: absolute;
 	top: -8px;
-	right: 15px;
-	width: 72px;
+	right: 12px;
+	width: 85px;
 	height: 2px;
 	/* border-right: 3px solid #b7bbc3; */
 	border-top: 3px solid #b7bbc3;
@@ -58,7 +58,7 @@
   .cart {
     width: 50%; /* Full width on narrow screens */
     margin: 0; /* Remove margin */
-    top: 100px;
+    top: 92px;
     right: 0px;
     border-right-width: 0;
     border-radius: 7px 0 0 7px;

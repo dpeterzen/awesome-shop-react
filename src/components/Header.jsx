@@ -8,20 +8,15 @@ function Links({ handleMouseEnterCart, handleMouseLeaveCart }) {
   const { cartItems } = useContext(ShopContext); // We must pass the ShopContext object itself as an argument
 
   return (
-    <ul>
-      <li>
-        <Link to="#home">
-          <span>Home</span>
-        </Link>
-      </li>
-      <li>
-        <Link to="#">
-          <span>Products</span>
-        </Link>
-      </li>
+    <>
+    <div className="left-links">
+      <Link to="/">Home</Link>
+      <Link to="/products">Products</Link>
+    </div>
+
 
       {/* hoverable cart link here */}
-      <li
+      <div
         className="cart-link"
         onMouseEnter={handleMouseEnterCart}
         onMouseLeave={handleMouseLeaveCart}
@@ -30,8 +25,9 @@ function Links({ handleMouseEnterCart, handleMouseLeaveCart }) {
           <span>Cart</span>
           <span className="cart-icon">{cartItems.length}</span>
         </Link>
-      </li>
-    </ul>
+      </div>
+    </>
+
   );
 }
 
@@ -39,7 +35,7 @@ export default function Header({ handleMouseEnterCart, handleMouseLeaveCart }) {
   return (
     <header>
       <div className="logo">Very Awesome Shop</div>
-      <nav>
+      <nav className="nav-links">
         <Links
           handleMouseEnterCart={handleMouseEnterCart}
           handleMouseLeaveCart={handleMouseLeaveCart}
