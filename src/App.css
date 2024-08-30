@@ -6,7 +6,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: relative; /* Ensure the cart is positioned relative to the root */
+  position: relative;
+  background-color: #111827; /* Ensure the cart is positioned relative to the root */
 }
 
 

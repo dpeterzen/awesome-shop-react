@@ -22,6 +22,7 @@ function Links({ handleMouseEnterCart, handleMouseLeaveCart }) {
 
       {/* hoverable cart link here */}
       <li
+        className="cart-link"
         onMouseEnter={handleMouseEnterCart}
         onMouseLeave={handleMouseLeaveCart}
       >

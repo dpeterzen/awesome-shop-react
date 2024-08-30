@@ -17,21 +17,23 @@ header {
   margin-left: 1rem;
 }
 /* Styling for the navigation */
-nav {
+header nav {
   display: flex;
 }
 
 /* Styling for the list of links */
-ul {
-  list-style: none;
+nav ul {
   display: flex;
-  gap: 1rem; /* Space between links */
-  margin: 0;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
   padding: 0;
+  margin: 0;
+  gap: 1rem;
 }
 
 /* Styling for individual list items */
-li {
+nav ul li {
   box-sizing: border-box;
   padding: 16px 0;
   display: flex;
@@ -47,6 +49,10 @@ nav a {
   font-size: .9em;
   font-weight: 600;
 
+}
+
+.cart-link {
+  position: relative;
 }
 
 .cart-icon {
@@ -68,7 +74,7 @@ nav a {
   }
 
   header nav ul {
-    width: 100%;
+    justify-content: center;
   }
 
   header nav ul li {
@@ -78,5 +84,10 @@ nav a {
   .logo {
 
     margin-left: 0;
+  }
+
+  .cart-link {
+    position: absolute;
+    right: 10px;
   }
 }
