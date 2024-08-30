@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { useContext, useState } from "react";
 import ShopContext from "../../context/ShopContext";
-import CartTooltip from "../CartTooltip/CartTooltip";
+import CartTooltip from "./CartTooltip/CartTooltip";
 import "./Header.css";
 
 /* eslint-disable react/prop-types */
