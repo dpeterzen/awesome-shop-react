@@ -59,6 +59,6 @@ export default function CartTooltip({
 }
 
 CartTooltip.propTypes = {
-  openCart: PropTypes.bool.isRequired,
+  openCart: PropTypes.bool,
   cartItems: PropTypes.array.isRequired,
 };
