@@ -1,21 +1,21 @@
-## TODO:
 
-- structure components and styles together
-- look at other react / tsx repos to see how they structure files
-- make ProductGrid component
-- move product grid styles out of App.css
-
-
-## Next TODO
-- create product context - refer to fruits
-- work in the ProductSection, get all products to render
-- print Items (length) no need to paginate now
-- create cart page
-
-- claude generate fake data
-
+## Notes
 - Consider Typescript
     type SetFruits = Dispatch<SetStateAction<Fruits>>;\
     Ask copilot to explain fruits code
 
 - Consider css modules
+
+- need to eventually replace cart tooltip with library bc of display none transition limitations.
+- in a normal tooltip you have time to hover over container (i.e. transition delays) instead of hacking the clickable region so as to not unhover.
+
+
+- think about filter types (on sale, brand, category, almost gone, sold out)
+
+
+- sort by recommended, alphabetical a-z, alphabetical z-a, price low high, price high low
+
+
+## TODO
+- create cart page
+- redo header into left and right nav parts (right cart and likes). Refer to fruits

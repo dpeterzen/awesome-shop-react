@@ -7,13 +7,13 @@ const ProductSection = () => {
     const { products } = useContext(ShopContext);
 
     return (
-        <>
+        <div className="product-section">
           <div className="product-grid">
             {products.map((product, index) => (
               <ProductItem key={index} {...product} />
             ))}
           </div>
-        </>
+        </div>
       );
 };
 

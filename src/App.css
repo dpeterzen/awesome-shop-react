@@ -1,11 +1,8 @@
 #root {
-  max-width: 1080px;
   margin: 0 auto;
   width: 100%;
-  padding: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   position: relative;
-  background-color: #111827; /* Ensure the cart is positioned relative to the root */
 }

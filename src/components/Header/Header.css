@@ -4,11 +4,12 @@
 header {
     box-sizing: border-box;
     width: 100%;
-    padding: 0 .2rem;
+    padding: 0 35px;
     display: flex;
     justify-content: space-between; /* Space between elements */
     align-items: center; /* Center items vertically */
     border: 3px solid;
+    border-width: 0 0 3px 0;
     border-radius: 1px;
   }
   .logo {
@@ -37,11 +38,12 @@ header {
     box-sizing: border-box;
     display: flex;
     align-items: center;
-    padding: 16px 0;
+    padding: 18px 0;
     gap: 1rem;
   }
   .cart-link {
-    padding: 16px;
+    padding: 18px;
+    padding-right: 15px;
   }
   /* Styling for the links */
   nav a {
@@ -68,7 +70,8 @@ header {
     header {
       box-sizing: content-box;
       flex-direction: column;
-      border-top: none;
+      padding: 0px;
+
     }
   
     .nav-links {

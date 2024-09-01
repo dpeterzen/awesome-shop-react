@@ -1,16 +1,27 @@
 import { v4 as uuidv4 } from "uuid";
-
+/*
+    "outdoor" (8 products)
+    "electronics" (7 products)
+    "gift" (7 products)
+    "home" (6 products)
+    "fun" (5 products)
+    "hobby" (5 products)
+    "music" (4 products)
+    "travel" (4 products)
+    "wireless" (4 products)
+    "clothing" (4 products)
+*/
 export const initialProducts = [
     {
       id: uuidv4(),
-      name: "Backpack",
-      slug: "backpack",
+      name: "Light Backpack",
+      slug: "light-backpack",
       category: "Accessories",
       price: 59.99,
       stock: 100,
       rating: 4.5,
-      image: "/images/backpack.jpg",
-      description: "A durable and spacious backpack for all your adventures.",
+      image: "/images/light-backpack.png",
+      description: "To carry only useful equipment to go to school or on a short trip in the countryside.",
       onSale: false,
       tags: ["travel", "outdoor", "storage", "durable"]
     },

@@ -1,13 +1,46 @@
+/* Dynamic Spacing */
 
-/* Individual product styling */
-  .product-item {
-    border: 3px solid;
-    border-radius: 1px;
-    padding: 16px;
-    text-align: center;
-    transition: transform 0.2s; /* Smooth hover effect */
-  }
-  
-  .product-item:hover {
-    transform: translateY(-3px); /* Lift effect on hover */
-  }
+.product-item {
+  --spacing: 25px;
+  --image-size: 60px;
+  --icon-size: 26px;
+}
+
+.product-item {
+  border: 1px solid;
+  border-radius: 8px;
+  aspect-ratio: 9 / 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.product-image {
+  width: 35px;
+  height: 35px;
+  margin: auto; /* Center the image horizontally */
+}
+
+.product-details {
+  flex-grow: 1;
+  margin-left: 10px;
+  text-align: left;
+}
+
+.product-details h3,
+.product-details p {
+  margin: 0;
+}
+
+.top-right-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.bottom-right-button {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
