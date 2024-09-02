@@ -1,8 +1,8 @@
 
-const CartIcon = () => {
+const CartIcon = ({ className }) => {
   return (
-	<svg fill="#000000" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xlinkHref="http://www.w3.org/1999/xlink" 
-	width="80px" height="80px" viewBox="0 0 902.86 902.86" xmlSpace="preserve">
+	<svg className={className} version="1.1" xmlns="http://www.w3.org/2000/svg" xlinkHref="http://www.w3.org/1999/xlink" 
+	viewBox="0 0 902.86 902.86" xmlSpace="preserve">
 <g>
 	<g>
 		<path d="M671.504,577.829l110.485-432.609H902.86v-68H729.174L703.128,179.2L0,178.697l74.753,399.129h596.751V577.829z
