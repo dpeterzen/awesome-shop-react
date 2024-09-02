@@ -2,34 +2,11 @@ import { Link } from "react-router-dom";
 import { useContext, useState } from "react";
 import ShopContext from "../../context/ShopContext";
 import CartTooltip from "./CartTooltip/CartTooltip";
+import NavbarCart from "./NavbarCart/NavbarCart";
 import "./Header.css";
+import CartIcon from "../../icons/CartIcon";
 
 /* eslint-disable react/prop-types */
-function Links({ handleMouseEnterCart, handleMouseLeaveCart }) {
-  const { cartItems } = useContext(ShopContext); // We must pass the ShopContext object itself as an argument
-
-  return (
-    <>
-      <div className="left-links">
-        <Link to="/"><h3>Home</h3></Link>
-        <Link to="/shop"><h3>Shop</h3></Link>
-      </div>
-
-      {/* hoverable cart link here */}
-      <div
-        className="cart-link"
-        onMouseEnter={handleMouseEnterCart}
-        onMouseLeave={handleMouseLeaveCart}
-      >
-        <Link to="#">
-          <span>Cart</span>
-          <span className="cart-icon">{cartItems.length}</span>
-        </Link>
-      </div>
-    </>
-  );
-}
-
 export default function Header() {
   const { cartItems } = useContext(ShopContext);
   const [openCartTooltip, setOpenCartTooltip] = useState(false);
@@ -44,12 +21,27 @@ export default function Header() {
   return (
     <>
       <header>
-        <div className="logo">Very Awesome Shop</div>
-        <nav className="nav-links">
-          <Links
-            handleMouseEnterCart={handleMouseEnterCart}
-            handleMouseLeaveCart={handleMouseLeaveCart}
-          />
+        <nav className="navbar">
+          <div className="navbar-left">
+            <div className="logo">
+              <Link to="/">
+                <h1>Very Awesome Shop</h1>
+              </Link>
+            </div>
+            <Link to="/">
+              <h3>Home</h3>
+            </Link>
+            <Link to="/shop">
+              <h3>Shop</h3>
+            </Link>
+          </div>
+
+          <div className="navbar-right">
+            <CartIcon />
+            <div className="right-icons">
+              <NavbarCart />
+            </div>
+          </div>
         </nav>
       </header>
       <CartTooltip
