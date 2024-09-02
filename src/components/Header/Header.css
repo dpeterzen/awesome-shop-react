@@ -1,6 +1,5 @@
 /* src/styles/header.css */
 
-/* Basic styling for the header */
 header {
     box-sizing: border-box;
     width: 100%;
@@ -8,23 +7,21 @@ header {
     display: flex;
     justify-content: space-between; /* Space between elements */
     align-items: center; /* Center items vertically */
-    border: 3px solid;
-    border-width: 0 0 3px 0;
-    border-radius: 1px;
+    border: 1px solid var(--color-300);
+    border-width: 0 0 1px 0;
   }
   .logo {
     font-size: 1.4rem;
-    font-weight: bold;
+    font-weight: 700;
+    letter-spacing: -2px;
     margin-left: 1rem;
   }
-  /* Styling for the navigation */
   header nav {
     display: flex;
     justify-content: flex-end; /* Align items to the right */
     align-items: center;
   }
   
-  /* Styling for the list of links */
   .nav-links {
     display: flex;
     justify-content: flex-end; /* Align items to the right */
@@ -32,27 +29,31 @@ header {
     padding: 0;
     margin: 0;
   }
-  
-  /* Styling for individual list items */
-  .left-links {
-    box-sizing: border-box;
-    display: flex;
-    align-items: center;
-    padding: 18px 0;
-    gap: 1rem;
-  }
-  .cart-link {
-    padding: 18px;
-    padding-right: 15px;
-  }
-  /* Styling for the links */
+
   nav a {
     text-decoration: none;
     display: flex;
     align-items: center;
+  }
+
+  
+  .left-links {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+  }
+  .left-links a {
+    padding: 18px 14px;
+  }
+  .cart-link a {
+    padding: 18px 14px;
     font-size: .9em;
     font-weight: 600;
-  
+    border-radius: 3px;
+  }
+
+  .cart-link a:hover {
+    background-color: light-dark(var(--color-100), #1a2335);
   }
   
   .cart-link {

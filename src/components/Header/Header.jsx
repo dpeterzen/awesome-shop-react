@@ -11,8 +11,8 @@ function Links({ handleMouseEnterCart, handleMouseLeaveCart }) {
   return (
     <>
       <div className="left-links">
-        <Link to="/">Home</Link>
-        <Link to="/shop">Shop</Link>
+        <Link to="/"><h3>Home</h3></Link>
+        <Link to="/shop"><h3>Shop</h3></Link>
       </div>
 
       {/* hoverable cart link here */}
