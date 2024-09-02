@@ -37,7 +37,6 @@ export default function Header() {
           </div>
 
           <div className="navbar-right">
-            <CartIcon />
             <div className="right-icons">
               <NavbarCart />
             </div>
