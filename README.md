@@ -26,3 +26,5 @@ import "react-tooltip/dist/react-tooltip.css";
 
 - dark mode toggler kek
 - funny search bar
+
+- inspect svg element to get d= source https://game-icons.net/1x1/delapouite/water-gun.html

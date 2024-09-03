@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import "./ProductItem.css";
-import LightBackpack from "../../../icons/LightBackpack";
+import LightBackpack from "../../../icons/products/LightBackpack";
 
 const ProductItem = ({ name, price, category, slug, ProductIcon }) => {
   return (
