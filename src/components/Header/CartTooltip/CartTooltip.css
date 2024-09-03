@@ -5,14 +5,13 @@
 	border-radius: 7px;
 	z-index: 1000;
 	position: absolute;
-	top: 60px;
-	right: 39px;
+	top: 80px;
+	right: 46px;
 	width: 100%;
 	max-width: 400px;
 	background-color: light-dark(var(--body-background-light), var(--content-background-dark));
 	/* overflow-y: auto; */
 	max-height: calc(100vh - 60px - 4rem);
-
 	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 
 }
@@ -36,8 +35,8 @@
 	right: 18px;
 	width: 6px;
 	height: 6px;
-	border-right: 2px solid;
-	border-top: 2px solid;
+	border-right: 1px solid;
+	border-top: 1px solid;
 	transform: rotate(-45deg);
 	z-index: 1000;
 	background-color: light-dark(var(--content-background-light), var(--body-background-dark));
@@ -59,14 +58,10 @@
   .cart {
     width: 50%; /* Full width on narrow screens */
     margin: 0; /* Remove margin */
-    top: 89px;
-    right: 15px;
+    top: 77px;
+    right: 22px;
   }
 
-  .cart::before {
-    top: -8px;
-    right: -3px;
-  }
 }
 
 

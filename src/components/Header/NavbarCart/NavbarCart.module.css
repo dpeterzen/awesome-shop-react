@@ -1,6 +1,6 @@
-/* .bagContainer {
-    cursor: pointer;
-  } */
+.navbarCart a {
+  padding-left: 6px;
+}
   
   .cart {
     height: 34px;

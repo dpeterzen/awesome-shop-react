@@ -28,17 +28,20 @@ export default function Header() {
                 <h1>Very Awesome Shop</h1>
               </Link>
             </div>
+            <div className="navbar-links">
             <Link to="/">
               <h3>Home</h3>
             </Link>
             <Link to="/shop">
               <h3>Shop</h3>
             </Link>
+            </div>
+
           </div>
 
           <div className="navbar-right">
             <div className="right-icons">
-              <NavbarCart />
+              <NavbarCart handleMouseEnterCart={handleMouseEnterCart} handleMouseLeaveCart={handleMouseLeaveCart} />
             </div>
           </div>
         </nav>
