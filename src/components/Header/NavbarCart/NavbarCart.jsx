@@ -3,6 +3,7 @@ import { useContext } from 'react'
 import ShopContext from "../../../context/ShopContext";
 import styles from "./NavbarCart.module.css";
 import CartIcon from "../../../icons/CartIcon";
+import BagIcon from "../../../icons/BagIcon";
 
 /* eslint-disable react/prop-types */
 const NavbarCart = ({ handleMouseEnterCart, handleMouseLeaveCart }) => {
@@ -16,7 +17,7 @@ const NavbarCart = ({ handleMouseEnterCart, handleMouseLeaveCart }) => {
     >
       <Link to="/cart">
         <div className={styles.cartContainer}>
-          <CartIcon className={styles.cart}></CartIcon>
+          <BagIcon className={styles.cart}></BagIcon>
           <div className={styles.number}>{cartItems.length}</div>
         </div>
       </Link>

@@ -22,3 +22,7 @@ import "react-tooltip/dist/react-tooltip.css";
 - redo header into left and right nav parts (right cart and likes). Refer to fruits
 - do tooltip arrow box shadow like on product button stack overflow
 - add box shadow to tooltip
+
+
+- dark mode toggler kek
+- funny search bar

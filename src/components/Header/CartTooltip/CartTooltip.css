@@ -6,7 +6,7 @@
 	z-index: 1000;
 	position: absolute;
 	top: 80px;
-	right: 46px;
+	right: 43px;
 	width: 100%;
 	max-width: 400px;
 	background-color: light-dark(var(--body-background-light), var(--content-background-dark));
@@ -59,7 +59,7 @@
     width: 50%; /* Full width on narrow screens */
     margin: 0; /* Remove margin */
     top: 77px;
-    right: 22px;
+    right: 18px;
   }
 
 }

@@ -53,6 +53,8 @@
   --fs-fine: 11px;
   --fs-caption: 12px;
   --fs-body1: 13px;
+
+  --svg-fill-color: #000;
 }
 
 :root {
@@ -121,8 +123,15 @@ button:focus,
 button:focus-visible {
 }
 
+@media (prefers-color-scheme: dark) {
+  :root {
+    --svg-fill-color: #fff; /* Fill color for dark mode */
+  }
+}
+
 @media (prefers-color-scheme: light) {
   :root {
+    --svg-fill-color: #000; /* Fill color for light mode */
     color: var(--color-light);
     background-color: var(--body-background-light);
   }

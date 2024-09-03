@@ -18,6 +18,7 @@ export default function Header() {
   const handleMouseLeaveCart = () => {
     setOpenCartTooltip(false);
   };
+
   return (
     <>
       <header>
