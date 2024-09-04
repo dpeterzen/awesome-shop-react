@@ -9,6 +9,10 @@ const ProductSection = () => {
 
     return (
         <div className="product-section">
+        <h2 className="title-count">
+          Items ({products.length})
+        </h2>
+
           <div className="product-grid">
             {products.map((product, index) => (
               <ProductItem

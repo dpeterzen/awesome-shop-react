@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 import { useContext } from 'react'
 import ShopContext from "../../../context/ShopContext";
 import styles from "./NavbarCart.module.css";
-import CartIcon from "../../../icons/CartIcon";
 import BagIcon from "../../../icons/BagIcon";
 
 /* eslint-disable react/prop-types */

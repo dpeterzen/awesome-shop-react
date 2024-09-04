@@ -9,6 +9,7 @@ const ShopContext = createContext({
   products: initialProducts,
   cartItems: [],
   addToCart: () => {},
+  removeFromCart: () => {},
 });
 
 export default ShopContext;

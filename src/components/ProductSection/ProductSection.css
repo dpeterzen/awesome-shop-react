@@ -35,7 +35,7 @@
   }
   
   @media screen and (max-width: 940px) {
-    .title {
+    .title-count {
       font-size: 16px;
     }
   
@@ -59,7 +59,7 @@
   }
   
   @media screen and (max-width: 540px) {
-    .title {
+    .title-count {
       font-size: 14px;
     }
   
