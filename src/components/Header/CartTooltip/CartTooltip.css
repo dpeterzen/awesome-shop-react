@@ -13,7 +13,6 @@
 	/* overflow-y: auto; */
 	max-height: calc(100vh - 60px - 4rem);
 	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-
 }
 
 .cart p {
@@ -28,7 +27,7 @@
   display: block;
 }
 
-.cart::after {
+/* .cart::after {
 	content: '';
 	position: absolute;
 	top: -11px;
@@ -40,7 +39,7 @@
 	transform: rotate(-45deg);
 	z-index: 1000;
 	background-color: light-dark(var(--content-background-light), var(--body-background-dark));
-}
+} */
 
 .cart::before {
 	content: '';
