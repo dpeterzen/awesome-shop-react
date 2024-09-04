@@ -2,13 +2,13 @@ import { Link } from "react-router-dom";
 import "./ProductItem.css";
 import LightBackpack from "../../../icons/products/LightBackpack";
 
-const ProductItem = ({ name, price, category, slug, svgName, ProductIcon }) => {
+const ProductItem = ({ name, price, category, slug, svgName, isOdd, ProductIcon }) => {
   return (
     <Link to={slug} >
       <div className="product-item">
         {/* <LightBackpack className="product-image" /> */}
         {/* <img src={image} alt={name} className="product-image" /> */}
-        <ProductIcon name={svgName} />
+        <ProductIcon isOdd={isOdd} name={svgName} />
         <div className="product-info">
           <h3>{name}</h3>
           <p>{category}</p>

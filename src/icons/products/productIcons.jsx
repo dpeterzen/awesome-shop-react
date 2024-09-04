@@ -1,45 +1,9 @@
-export const Banana = () => {
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 512 512"
-      className="product-image"
-    >
-      <g transform="translate(0,0)">
-        <path
-          d="M390 28.11c0 6.53-.1 12.92-.4 19.21 1.4-.1 2.7-.14 3.9-.16 9.7-.17 18.4 1.19 26.7 3 1.5-5.66 3.5-11.65 6.2-18.06-12.7.76-24.8-.73-36.4-3.99zm4 37.02c-1.7 0-3.5.15-5.4.32-5.4 72.95-26.6 128.45-56.7 171.25-36.5 52-85.5 85.2-132.7 109.6-47.1 24.6-92.7 40.7-122.34 57.8-14.79 8.6-25.29 17.4-30.55 26.3-3.3 5.6-4.98 11.3-4.54 18.3l23.93 8.1c61-12.1 145.2-42.8 215.1-89.1 40.7-26.9 76.6-59 100.5-95.2 23.9-36.3 36.1-76.4 30.2-120.8l17.9-2.3c6.4 49-7.4 93.9-33.1 133-25.8 39-63.4 72.5-105.6 100.4-70.4 46.6-153.4 77.6-216.72 90.8l-5.85 11c4.4 1.9 9.38 3.4 14.96 4.6 20.81 4.4 49.01 3.6 80.31-2.9 62.8-12.8 138.1-47.4 197.2-101 54-48.8 92.3-105.8 104.9-157 12.7-51.3 1.3-95.7-45.2-126.5l-3.9-2.51-.2-4.51c-.4-8.19-.6-17.02.5-26.95-7.4-1.67-14.8-2.84-22.7-2.7z"
-          fill="var(--svg-fill-color)"
-          fillOpacity="1"
-        ></path>
-      </g>
-    </svg>
-  );
-};
-
-export const Bazooka = () => {
+export const LightBackpack = ({ odd }) => {
   return (
 <svg
   xmlns="http://www.w3.org/2000/svg"
   viewBox="0 0 512 512"
-  className="product-image"
->
-  <g transform="translate(0,0)">
-    <path
-      d="M80 33c-12.62 0-21.38 6.47-28.26 18.09C44.86 62.7 41 79.33 41 96c0 16.7 3.86 33.3 10.74 44.9C58.62 152.5 67.38 159 80 159h39V33zm57 0v126h174V33zm192 0v126h39c12.6 0 21.4-6.5 28.3-18.1 6.8-11.6 10.7-28.2 10.7-44.9 0-16.67-3.9-33.3-10.7-44.91C389.4 39.47 380.6 33 368 33zM119 177v32H41v94h366v-94h-78v-32h-18v32H137v-32zm306 48v30h46v-30zm-337.54 4.2l17.04 5.6-15.96 48-17.08-5.6zm48.04 0l17 5.6-16 48-17-5.6zm48 0l17 5.6-16 48-17-5.6zM84.95 321L65 440.7c12.89-22.1 26.47-44 42.9-64 18-21.8 39.6-41.3 67.1-55.7zm123.15 5.1c-37.8 13.2-64.3 35.2-86.3 62-22.2 27-39.57 59.1-58.07 90.9H144c5 0 10.7-2.4 17.6-9.4 6.8-6.8 14.3-17.8 21.9-32.7zM247 328v23h-26l-4 18h30v23h18v-64z"
-      fill="var(--svg-fill-color)"
-      fillOpacity="1"
-    ></path>
-  </g>
-</svg>
-  );
-};
-
-export const LightBackpack = () => {
-  return (
-<svg
-  xmlns="http://www.w3.org/2000/svg"
-  viewBox="0 0 512 512"
-  className="product-image"
+  className={`product-image${odd}`}
 >
   <g transform="translate(0,0)">
     <path
@@ -52,12 +16,48 @@ export const LightBackpack = () => {
   );
 };
 
-export const Beanie = () => {
+export const Banana = ({ odd }) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 512 512"
+      className={`product-image${odd}`}
+    >
+      <g transform="translate(0,0)">
+        <path
+          d="M390 28.11c0 6.53-.1 12.92-.4 19.21 1.4-.1 2.7-.14 3.9-.16 9.7-.17 18.4 1.19 26.7 3 1.5-5.66 3.5-11.65 6.2-18.06-12.7.76-24.8-.73-36.4-3.99zm4 37.02c-1.7 0-3.5.15-5.4.32-5.4 72.95-26.6 128.45-56.7 171.25-36.5 52-85.5 85.2-132.7 109.6-47.1 24.6-92.7 40.7-122.34 57.8-14.79 8.6-25.29 17.4-30.55 26.3-3.3 5.6-4.98 11.3-4.54 18.3l23.93 8.1c61-12.1 145.2-42.8 215.1-89.1 40.7-26.9 76.6-59 100.5-95.2 23.9-36.3 36.1-76.4 30.2-120.8l17.9-2.3c6.4 49-7.4 93.9-33.1 133-25.8 39-63.4 72.5-105.6 100.4-70.4 46.6-153.4 77.6-216.72 90.8l-5.85 11c4.4 1.9 9.38 3.4 14.96 4.6 20.81 4.4 49.01 3.6 80.31-2.9 62.8-12.8 138.1-47.4 197.2-101 54-48.8 92.3-105.8 104.9-157 12.7-51.3 1.3-95.7-45.2-126.5l-3.9-2.51-.2-4.51c-.4-8.19-.6-17.02.5-26.95-7.4-1.67-14.8-2.84-22.7-2.7z"
+          fill="var(--svg-fill-color)"
+          fillOpacity="1"
+        ></path>
+      </g>
+    </svg>
+  );
+};
+
+export const Bazooka = ({ odd }) => {
   return (
 <svg
   xmlns="http://www.w3.org/2000/svg"
   viewBox="0 0 512 512"
-  className="product-image"
+  className={`product-image${odd}`}
+>
+  <g transform="translate(0,0)">
+    <path
+      d="M80 33c-12.62 0-21.38 6.47-28.26 18.09C44.86 62.7 41 79.33 41 96c0 16.7 3.86 33.3 10.74 44.9C58.62 152.5 67.38 159 80 159h39V33zm57 0v126h174V33zm192 0v126h39c12.6 0 21.4-6.5 28.3-18.1 6.8-11.6 10.7-28.2 10.7-44.9 0-16.67-3.9-33.3-10.7-44.91C389.4 39.47 380.6 33 368 33zM119 177v32H41v94h366v-94h-78v-32h-18v32H137v-32zm306 48v30h46v-30zm-337.54 4.2l17.04 5.6-15.96 48-17.08-5.6zm48.04 0l17 5.6-16 48-17-5.6zm48 0l17 5.6-16 48-17-5.6zM84.95 321L65 440.7c12.89-22.1 26.47-44 42.9-64 18-21.8 39.6-41.3 67.1-55.7zm123.15 5.1c-37.8 13.2-64.3 35.2-86.3 62-22.2 27-39.57 59.1-58.07 90.9H144c5 0 10.7-2.4 17.6-9.4 6.8-6.8 14.3-17.8 21.9-32.7zM247 328v23h-26l-4 18h30v23h18v-64z"
+      fill="var(--svg-fill-color)"
+      fillOpacity="1"
+    ></path>
+  </g>
+</svg>
+  );
+};
+
+export const Beanie = ({ odd }) => {
+  return (
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 512 512"
+  className={`product-image${odd}`}
 >
   <g transform="translate(0,0)">
     <path
@@ -70,12 +70,12 @@ export const Beanie = () => {
   );
 };
 
-export const DutchBike = () => {
+export const DutchBike = ({ odd }) => {
   return (
 <svg
   xmlns="http://www.w3.org/2000/svg"
   viewBox="0 0 512 512"
-  className="product-image"
+  className={`product-image${odd}`}
 >
   <g transform="translate(0,0)">
     <path
@@ -88,12 +88,12 @@ export const DutchBike = () => {
   );
 };
 
-export const Ace = () => {
+export const Ace = ({ odd }) => {
   return (
 <svg
   xmlns="http://www.w3.org/2000/svg"
   viewBox="0 0 512 512"
-  className="product-image"
+  className={`product-image${odd}`}
 >
   <g transform="translate(0,0)">
     <path
@@ -106,12 +106,12 @@ export const Ace = () => {
   );
 };
 
-export const Blender = () => {
+export const Blender = ({ odd }) => {
   return (
 <svg
   xmlns="http://www.w3.org/2000/svg"
   viewBox="0 0 512 512"
-  className="product-image"
+  className={`product-image${odd}`}
 >
   <g transform="translate(0,0)">
     <path
@@ -124,12 +124,12 @@ export const Blender = () => {
   );
 };
 
-export const Bongo = () => {
+export const Bongo = ({ odd }) => {
   return (
 <svg
   xmlns="http://www.w3.org/2000/svg"
   viewBox="0 0 512 512"
-  className="product-image"
+  className={`product-image${odd}`}
 >
   <g transform="translate(0,0)">
     <path
@@ -142,12 +142,12 @@ export const Bongo = () => {
   );
 };
 
-export const Boomerang = () => {
+export const Boomerang = ({ odd }) => {
   return (
 <svg
   xmlns="http://www.w3.org/2000/svg"
   viewBox="0 0 512 512"
-  className="product-image"
+  className={`product-image${odd}`}
 >
   <g transform="translate(0,0)">
     <path
@@ -160,12 +160,12 @@ export const Boomerang = () => {
   );
 };
 
-export const Camera = () => {
+export const Camera = ({ odd }) => {
   return (
 <svg
   xmlns="http://www.w3.org/2000/svg"
   viewBox="0 0 512 512"
-  className="product-image"
+  className={`product-image${odd}`}
 >
   <g transform="translate(0,0)">
     <path
@@ -178,12 +178,12 @@ export const Camera = () => {
   );
 };
 
-export const CandleHolder = () => {
+export const CandleHolder = ({ odd }) => {
   return (
 <svg
   xmlns="http://www.w3.org/2000/svg"
   viewBox="0 0 512 512"
-  className="product-image"
+  className={`product-image${odd}`}
 >
   <g transform="translate(0,0)">
     <path
@@ -196,12 +196,12 @@ export const CandleHolder = () => {
   );
 };
 
-export const FlexibleLamp = () => {
+export const FlexibleLamp = ({ odd }) => {
   return (
 <svg
   xmlns="http://www.w3.org/2000/svg"
   viewBox="0 0 512 512"
-  className="product-image"
+  className={`product-image${odd}`}
 >
   <g transform="translate(0,0)">
     <path
@@ -214,12 +214,12 @@ export const FlexibleLamp = () => {
   );
 };
 
-export const MagicLamp = () => {
+export const MagicLamp = ({ odd }) => {
   return (
 <svg
   xmlns="http://www.w3.org/2000/svg"
   viewBox="0 0 512 512"
-  className="product-image"
+  className={`product-image${odd}`}
 >
   <g transform="translate(0,0)">
     <path
@@ -232,12 +232,12 @@ export const MagicLamp = () => {
   );
 };
 
-export const Lantern = () => {
+export const Lantern = ({ odd }) => {
   return (
 <svg
   xmlns="http://www.w3.org/2000/svg"
   viewBox="0 0 512 512"
-  className="product-image"
+  className={`product-image${odd}`}
 >
   <g transform="translate(0,0)">
     <path
@@ -250,12 +250,12 @@ export const Lantern = () => {
   );
 };
 
-export const DeliveryDrone = () => {
+export const DeliveryDrone = ({ odd }) => {
   return (
 <svg
   xmlns="http://www.w3.org/2000/svg"
   viewBox="0 0 512 512"
-  className="product-image"
+  className={`product-image${odd}`}
 >
   <g transform="translate(0,0)">
     <path
@@ -268,12 +268,12 @@ export const DeliveryDrone = () => {
   );
 };
 
-export const Headphones = () => {
+export const Headphones = ({ odd }) => {
   return (
 <svg
   xmlns="http://www.w3.org/2000/svg"
   viewBox="0 0 512 512"
-  className="product-image"
+  className={`product-image${odd}`}
 >
   <g transform="translate(0,0)">
     <path
@@ -286,12 +286,12 @@ export const Headphones = () => {
   );
 };
 
-export const Fedora = () => {
+export const Fedora = ({ odd }) => {
   return (
 <svg
   xmlns="http://www.w3.org/2000/svg"
   viewBox="0 0 512 512"
-  className="product-image"
+  className={`product-image${odd}`}
 >
   <g transform="translate(0,0)">
     <path
@@ -304,12 +304,12 @@ export const Fedora = () => {
   );
 };
 
-export const Frisbee = () => {
+export const Frisbee = ({ odd }) => {
   return (
 <svg
   xmlns="http://www.w3.org/2000/svg"
   viewBox="0 0 512 512"
-  className="product-image"
+  className={`product-image${odd}`}
 >
   <g transform="translate(0,0)">
     <path
@@ -322,12 +322,12 @@ export const Frisbee = () => {
   );
 };
 
-export const PickOfDestiny = () => {
+export const PickOfDestiny = ({ odd }) => {
   return (
 <svg
   xmlns="http://www.w3.org/2000/svg"
   viewBox="0 0 512 512"
-  className="product-image"
+  className={`product-image${odd}`}
 >
   <g transform="translate(0,0)">
     <path
@@ -340,12 +340,12 @@ export const PickOfDestiny = () => {
   );
 };
 
-export const Guitar = () => {
+export const Guitar = ({ odd }) => {
   return (
 <svg
   xmlns="http://www.w3.org/2000/svg"
   viewBox="0 0 512 512"
-  className="product-image"
+  className={`product-image${odd}`}
 >
   <g transform="translate(0,0)">
     <path
@@ -358,12 +358,12 @@ export const Guitar = () => {
   );
 };
 
-export const RiceCooker = () => {
+export const RiceCooker = ({ odd }) => {
   return (
 <svg
   xmlns="http://www.w3.org/2000/svg"
   viewBox="0 0 512 512"
-  className="product-image"
+  className={`product-image${odd}`}
 >
   <g transform="translate(0,0)">
     <path
@@ -376,12 +376,12 @@ export const RiceCooker = () => {
   );
 };
 
-export const SleevelessJacket = () => {
+export const SleevelessJacket = ({ odd }) => {
   return (
 <svg
   xmlns="http://www.w3.org/2000/svg"
   viewBox="0 0 512 512"
-  className="product-image"
+  className={`product-image${odd}`}
 >
   <g transform="translate(0,0)">
     <path
@@ -394,12 +394,12 @@ export const SleevelessJacket = () => {
   );
 };
 
-export const Keyboard = () => {
+export const Keyboard = ({ odd }) => {
   return (
 <svg
   xmlns="http://www.w3.org/2000/svg"
   viewBox="0 0 512 512"
-  className="product-image"
+  className={`product-image${odd}`}
 >
   <g transform="translate(0,0)">
     <path
@@ -412,12 +412,12 @@ export const Keyboard = () => {
   );
 };
 
-export const OvenMitt = () => {
+export const OvenMitt = ({ odd }) => {
   return (
 <svg
   xmlns="http://www.w3.org/2000/svg"
   viewBox="0 0 512 512"
-  className="product-image"
+  className={`product-image${odd}`}
 >
   <g transform="translate(0,0)">
     <path
@@ -430,12 +430,12 @@ export const OvenMitt = () => {
   );
 };
 
-export const Pillow = () => {
+export const Pillow = ({ odd }) => {
   return (
 <svg
   xmlns="http://www.w3.org/2000/svg"
   viewBox="0 0 512 512"
-  className="product-image"
+  className={`product-image${odd}`}
 >
   <g transform="translate(0,0)">
     <path
@@ -448,12 +448,12 @@ export const Pillow = () => {
   );
 };
 
-export const Sunglasses = () => {
+export const Sunglasses = ({ odd }) => {
   return (
 <svg
   xmlns="http://www.w3.org/2000/svg"
   viewBox="0 0 512 512"
-  className="product-image"
+  className={`product-image${odd}`}
 >
   <g transform="translate(0,0)">
     <path
@@ -466,12 +466,12 @@ export const Sunglasses = () => {
   );
 };
 
-export const Unicycle = () => {
+export const Unicycle = ({ odd }) => {
   return (
 <svg
   xmlns="http://www.w3.org/2000/svg"
   viewBox="0 0 512 512"
-  className="product-image"
+  className={`product-image${odd}`}
 >
   <g transform="translate(0,0)">
     <path
@@ -484,12 +484,12 @@ export const Unicycle = () => {
   );
 };
 
-export const CompactDisc = () => {
+export const CompactDisc = ({ odd }) => {
   return (
 <svg
   xmlns="http://www.w3.org/2000/svg"
   viewBox="0 0 512 512"
-  className="product-image"
+  className={`product-image${odd}`}
 >
   <g transform="translate(0,0)">
     <path
@@ -502,12 +502,12 @@ export const CompactDisc = () => {
   );
 };
 
-export const Dodo = () => {
+export const Dodo = ({ odd }) => {
   return (
 <svg
   xmlns="http://www.w3.org/2000/svg"
   viewBox="0 0 512 512"
-  className="product-image"
+  className={`product-image${odd}`}
 >
   <g transform="translate(0,0)">
     <path
@@ -520,12 +520,12 @@ export const Dodo = () => {
   );
 };
 
-export const RoundPotion = () => {
+export const RoundPotion = ({ odd }) => {
   return (
 <svg
   xmlns="http://www.w3.org/2000/svg"
   viewBox="0 0 512 512"
-  className="product-image"
+  className={`product-image${odd}`}
 >
   <g transform="translate(0,0)">
     <path
@@ -538,12 +538,12 @@ export const RoundPotion = () => {
   );
 };
 
-export const Fridge = () => {
+export const Fridge = ({ odd }) => {
   return (
 <svg
   xmlns="http://www.w3.org/2000/svg"
   viewBox="0 0 512 512"
-  className="product-image"
+  className={`product-image${odd}`}
 >
   <g transform="translate(0,0)">
     <path
@@ -556,12 +556,12 @@ export const Fridge = () => {
   );
 };
 
-export const MetalDetector = () => {
+export const MetalDetector = ({ odd }) => {
   return (
 <svg
   xmlns="http://www.w3.org/2000/svg"
   viewBox="0 0 512 512"
-  className="product-image"
+  className={`product-image${odd}`}
 >
   <g transform="translate(0,0)">
     <path
@@ -574,12 +574,12 @@ export const MetalDetector = () => {
   );
 };
 
-export const DesertCamp = () => {
+export const DesertCamp = ({ odd }) => {
   return (
 <svg
   xmlns="http://www.w3.org/2000/svg"
   viewBox="0 0 512 512"
-  className="product-image"
+  className={`product-image${odd}`}
 >
   <g transform="translate(0,0)">
     <path
@@ -592,12 +592,12 @@ export const DesertCamp = () => {
   );
 };
 
-export const Telescope = () => {
+export const Telescope = ({ odd }) => {
   return (
 <svg
   xmlns="http://www.w3.org/2000/svg"
   viewBox="0 0 512 512"
-  className="product-image"
+  className={`product-image${odd}`}
 >
   <g transform="translate(0,0)">
     <path

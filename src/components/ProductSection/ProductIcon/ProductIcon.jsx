@@ -1,8 +1,9 @@
 import * as icons from "../../../icons/products/productIcons.jsx";
 
-const ProductIcon = ({ name }) => {
+const ProductIcon = ({ name, isOdd }) => {
+  const odd = isOdd ? "-odd" : "";
   const IconComponent = icons[name];
-  return IconComponent ? <IconComponent /> : null;
+  return IconComponent ? <IconComponent odd={odd} /> : null;
 };
 
 export default ProductIcon;

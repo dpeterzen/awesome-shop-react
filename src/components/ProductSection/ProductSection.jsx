@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import ShopContext from "../../context/ShopContext.jsx";
 import ProductItem from "./ProductItem/ProductItem.jsx";
 import ProductIcon from "./ProductIcon/ProductIcon.jsx";
@@ -10,10 +10,11 @@ const ProductSection = () => {
     return (
         <div className="product-section">
           <div className="product-grid">
-            {products.map((product) => (
+            {products.map((product, index) => (
               <ProductItem
                 key={product.id}
                 ProductIcon={ProductIcon}
+                isOdd={index % 2 !== 0}
                 {...product}
               />
             ))}
