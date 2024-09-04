@@ -28,3 +28,8 @@ import "react-tooltip/dist/react-tooltip.css";
 - funny search bar
 
 - inspect svg element to get d= source https://game-icons.net/1x1/delapouite/water-gun.html
+- select final data set and images - go through svg tabs
+- ask gpt to organize by name alpha
+- finish the svgs
+- hook up hover cart with product add to cart button. REMEMBER: bottom right cart icon filled state.
+    * add product item images to hover cart tooltip
