@@ -24,12 +24,12 @@
 
 
 .product-item:hover .product-image {
-  transform: translate(-5px, -15px) scale(1.2, 1.2) rotate(-11deg) skewX(0) skewY(0);
+  transform: translate(-5px, -15px) scale(1.2, 1.2) rotate(-7deg) skewX(0) skewY(0);
   transition: transform 0.3s ease;
 }
 
 .product-item:hover .product-image-odd {
-  transform: translate(-5px, -15px) scale(1.2, 1.2) rotate(11deg) skewX(0) skewY(0);
+  transform: translate(-5px, -15px) scale(1.2, 1.2) rotate(7deg) skewX(0) skewY(0);
   transition: transform 0.3s ease;
 }
 

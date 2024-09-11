@@ -31,7 +31,7 @@
 	visibility: visible;
 }
 
-/* .cart::after {
+.cart::after {
 	content: '';
 	position: absolute;
 	top: -11px;
@@ -43,7 +43,7 @@
 	transform: rotate(-45deg);
 	z-index: 1000;
 	background-color: light-dark(var(--content-background-light), var(--body-background-dark));
-} */
+}
 
 /* .cart::before {
 	content: '';
