@@ -24,12 +24,12 @@
 
 
 .product-item:hover .product-image {
-  transform: translate(-5px, -15px) scale(1.2, 1.2) rotate(-7deg) skewX(0) skewY(0);
+  transform: translate(-5px, -15px) scale(1.2, 1.2) rotate(-3deg) skewX(0) skewY(0);
   transition: transform 0.3s ease;
 }
 
 .product-item:hover .product-image-odd {
-  transform: translate(-5px, -15px) scale(1.2, 1.2) rotate(7deg) skewX(0) skewY(0);
+  transform: translate(-5px, -15px) scale(1.2, 1.2) rotate(3deg) skewX(0) skewY(0);
   transition: transform 0.3s ease;
 }
 
@@ -60,18 +60,36 @@
   fill: light-dark(var(--color-light), var(--color-dark));
 }
 
-.top-right-icon {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-}
-
-
 .add-to-cart {
   position: absolute;
   bottom: var(--spacing);
   right: var(--spacing);
   transition: transform 0.2s ease;
+}
+
+.add-to-cart:hover {
+  transform: scale(1.2);
+}
+
+.favorite {
+  position: absolute;
+  top: var(--spacing);
+  right: var(--spacing);
+  opacity: 0;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.product-item:hover .favorite {
+  opacity: 1;
+}
+
+.favorite:hover {
+  transform: scale(1.2);
+}
+
+.favorite.clicked {
+  fill: var(--color-red);
+  opacity: 1;
 }
 
 @media screen and (max-width: 940px) {

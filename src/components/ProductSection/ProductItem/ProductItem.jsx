@@ -3,6 +3,7 @@ import { useContext, useState } from "react";
 import ShopContext from "../../../context/ShopContext";
 import "./ProductItem.css";
 import BagIcon from "../../../icons/BagIcon";
+import FavoriteIcon from "../../../icons/FavoriteIcon";
 
 const ProductItem = ({ id, name, price, category, slug, svgName, isOdd, ProductIcon }) => {
   const { cartItems, addToCart, removeFromCart } = useContext(ShopContext);
@@ -25,10 +26,14 @@ const ProductItem = ({ id, name, price, category, slug, svgName, isOdd, ProductI
           <p>{category}</p>
           <h3>${price}</h3>
         </div>
-        <div className="top-right-icon">Top Right</div>
+        <FavoriteIcon
+          className="favorite"
+          isFilled={false}
+          onClick={null}
+        />
         <BagIcon
-          isFilled={inCart}
           className="add-to-cart"
+          isFilled={inCart}
           onClick={(e) => handleBagClick(e)}
         />
       </div>
