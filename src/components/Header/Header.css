@@ -3,8 +3,8 @@
 header {
   box-sizing: border-box;
   width: 100%;
-  border: 1px solid var(--color-300);
-  border-width: 0 0 1px 0;
+  /* border: 1px solid var(--color-300);
+  border-width: 0 0 1px 0; */
 }
 
 header h1, header h2, header h3 {
